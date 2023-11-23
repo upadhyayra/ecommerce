@@ -1,9 +1,9 @@
-import "./App.css";
+import "./css/App.css";
 import {BrowserRouter as Router ,Route , Routes} from 'react-router-dom'
-import Header from "./Header";
-import Home from "./Home";
-import Cartproduct from "./Cartproduct";
-import { Contextapi } from "./Contextapi";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Cartproduct from "./components/Cartproduct";
+import { Contextapi } from "./context/Contextapi";
 import { useState } from "react";
 
 function App() {

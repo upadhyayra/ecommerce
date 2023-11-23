@@ -1,22 +1,23 @@
-import React, { useEffect, useState, useContext } from 'react'
-import axios from 'axios';
-import { Contextapi } from './Contextapi';
-import ProductCard from './ProductCard';
-import Loading from './assets/loading.gif'
-
+import React, { useEffect, useState, useContext } from "react";
+import axios from "axios";
+import { Contextapi } from "../context/Contextapi";
+import ProductCard from "./ProductCard";
+import Loading from "../assets/loading.gif";
 
 function Home() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   const { user, setUser } = useContext(Contextapi);
   useEffect(() => {
-    axios.get('http://fakestoreapi.com/products').then((data) => setData(data.data)).catch((error) => {
-      console.log(error)
-    })
-  }, [])
+    axios
+      .get("http://fakestoreapi.com/products")
+      .then((data) => setData(data.data))
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   function hadleAddCart(item) {
- 
-    setUser([...user,item])
+    setUser([...user, item]);
   }
 
   return data == "" ? (
@@ -28,7 +29,7 @@ function Home() {
         height: "500px",
       }}
     >
-      <img src={Loading} alt="" style={{ width: "10%" , height:"20%"}} />
+      <img src={Loading} alt="" style={{ width: "10%", height: "20%" }} />
     </div>
   ) : (
     <div>
@@ -48,4 +49,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;

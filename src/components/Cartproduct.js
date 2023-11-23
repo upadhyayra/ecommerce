@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
-import emptyCart from "./assets/cartEmpty.jpg";
-import { Contextapi } from "./Contextapi";
+import emptyCart from "../assets/cartEmpty.jpg";
+import { Contextapi } from "../context/Contextapi";
 
 function Cartproduct() {
   const { user, setUser } = useContext(Contextapi);
