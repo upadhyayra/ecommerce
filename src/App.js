@@ -1,8 +1,8 @@
 import "./css/App.css";
 import {BrowserRouter as Router ,Route , Routes} from 'react-router-dom'
 import Header from "./components/Header";
-import Home from "./components/Home";
-import Cartproduct from "./components/Cartproduct";
+import Home from "./pages/Home";
+import Cartproduct from "./pages/Cartproduct";
 import { Contextapi } from "./context/Contextapi";
 import { useState } from "react";
 

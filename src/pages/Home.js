@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { Contextapi } from "../context/Contextapi";
-import ProductCard from "./ProductCard";
+import ProductCard from "../components/ProductCard";
 import Loading from "../assets/loading.gif";
 
 function Home() {
