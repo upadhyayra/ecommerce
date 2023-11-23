@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import emptyCart from './assets/cartEmpty.jpg'
+import emptyCart from "./assets/cartEmpty.jpg";
 import { Contextapi } from "./Contextapi";
 
 function Cartproduct() {
@@ -21,23 +21,23 @@ function Cartproduct() {
       setUser(temp);
     }
   };
-  
+
   let totalP = 0;
-  let totalprice=0;
+  let totalprice = 0;
   const calculateTotal = () => {
     for (const i of user) {
       totalP += i.quantity * i.price;
-      totalprice=totalP.toFixed(2)
+      totalprice = totalP.toFixed(2);
     }
     setTotal(totalprice);
   };
-  const handleDelete=(id)=>{
-  const newUser = user.filter((item) => item.id !== id);
-  setUser(newUser);
-  }
+  const handleDelete = (id) => {
+    const newUser = user.filter((item) => item.id !== id);
+    setUser(newUser);
+  };
   useEffect(() => {
     calculateTotal();
-  }, [user]);
+  }, [user,total]);
   return (
     <>
       {user.length === 0 ? (
@@ -94,7 +94,12 @@ function Cartproduct() {
                             +
                           </button>
                         </td>
-                        <td className="btn bg-danger text-white mt-3" onClick={()=>handleDelete(el.id)}>Delete</td>
+                        <td
+                          className="btn bg-danger text-white mt-3"
+                          onClick={() => handleDelete(el.id)}
+                        >
+                          Delete
+                        </td>
                       </tr>
                     ))}
                 </tbody>
@@ -107,6 +112,6 @@ function Cartproduct() {
       )}
     </>
   );
-                  }
+}
 
 export default Cartproduct;

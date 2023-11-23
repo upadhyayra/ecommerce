@@ -31,14 +31,14 @@ const ProductCard = ({ item, index, hadleAddCart}) => {
         temp[index].quantity = temp[index].quantity + 1;
         setProductQty(temp[index].quantity)
         setUser(temp);
-      } else if (type === "dec" && item.quantity === 1) {
+      } else if (type === "dec" && productQuantity === 1) {
         setUser(user.filter((el) => el.id !== item.id));
-        setDisableBtn(false)
+        setDisableBtn(false);
       } else {
         const temp = [...user];
         const index = temp.findIndex((e) => e.id === item.id);
         temp[index].quantity = temp[index].quantity - 1;
-        setProductQty(temp[index].quantity)
+        setProductQty(temp[index].quantity);
         setUser(temp);
       }
     };
