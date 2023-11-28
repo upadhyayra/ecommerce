@@ -1,5 +1,5 @@
 import React,{useEffect,useContext,useState} from 'react'
-import { Contextapi } from '../context/ContextApi';
+import { ContextApi } from '../context/ContextApi';
 
 const ProductCard = ({ item, index, hadleAddCart}) => {
     const {user,setUser} = useContext(ContextApi);
