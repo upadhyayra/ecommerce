@@ -1,8 +1,8 @@
 import React,{useEffect,useContext,useState} from 'react'
-import { Contextapi } from '../context/Contextapi';
+import { Contextapi } from '../context/ContextApi';
 
 const ProductCard = ({ item, index, hadleAddCart}) => {
-    const {user,setUser} = useContext(Contextapi);
+    const {user,setUser} = useContext(ContextApi);
     const [disableBtn,setDisableBtn] = useState(false)
     const [productQuantity,setProductQty] = useState(1)
  

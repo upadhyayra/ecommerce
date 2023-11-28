@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
 import emptyCart from "../assets/cartEmpty.jpg";
-import { Contextapi } from "../context/Contextapi";
+import { ContextApi } from "../context/ContextApi";
 
 function Cartproduct() {
-  const { user, setUser } = useContext(Contextapi);
+  const { user, setUser } = useContext(ContextApi);
   const [total, setTotal] = useState("");
 
   const handleQuantity = (type, el) => {

@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
-import { Contextapi } from "../context/Contextapi";
+import { ContextApi } from "../context/ContextApi";
 import ProductCard from "../components/ProductCard";
 import Loading from "../assets/loading.gif";
 
 function Home() {
   const [data, setData] = useState([]);
-  const { user, setUser } = useContext(Contextapi);
+  const { user, setUser } = useContext(ContextApi);
   useEffect(() => {
     try {
       axios

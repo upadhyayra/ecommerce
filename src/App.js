@@ -3,7 +3,7 @@ import {BrowserRouter as Router ,Route , Routes} from 'react-router-dom'
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Cartproduct from "./pages/Cartproduct";
-import { Contextapi } from "./context/Contextapi";
+import { ContextApi } from "./context/ContextApi";
 import { useState } from "react";
 
 function App() {
@@ -11,13 +11,13 @@ function App() {
 return (
   <div>
     <Router>
-      <Contextapi.Provider value={{user,setUser}}>
+      <ContextApi.Provider value={{user,setUser}}>
         <Header />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/Cart" element={<Cartproduct />}></Route>
         </Routes>
-      </Contextapi.Provider>
+      </ContextApi.Provider>
     </Router>
   </div>
 );
