@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
     try {
       axios
-        .get("http://fakestoreapi.com/products")
+        .get("https://fakestoreapi.com/products")
         .then((data) => setData(data.data))
         .catch((error) => {
           console.log(error);
@@ -25,7 +25,7 @@ function Home() {
     setUser([...user, item]);
   }
 
-  return data == "" ? (
+  return data== "" ? (
     <div
       style={{
         display: "flex",

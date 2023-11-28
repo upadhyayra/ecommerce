@@ -59,7 +59,7 @@ const ProductCard = ({ item, index, hadleAddCart}) => {
       />
       <div className="card-body d-flex flex-column">
         <h5 className="card-title ">{item.title}</h5>
-        <p className="card-text">{item.description.slice(0, 100) + "..."}</p>
+        <p className="card-text description">{item.description}</p>
         <p className="card-text">Rating:{item.rating.rate}</p>
         <p className="price">Price : ${item.price * productQuantity}</p>
         {disableBtn == false ? (

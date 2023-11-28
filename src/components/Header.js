@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ContextApi } from "../context/ContextApi";
 import { useContext, useState } from "react";
 
-function Header() {
+function Header() { 
   
   const { user } = useContext(ContextApi);
   const [isCart, setIsCart] = useState(true);
