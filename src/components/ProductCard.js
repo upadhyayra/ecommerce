@@ -6,7 +6,7 @@ const ProductCard = ({ item, index, hadleAddCart}) => {
     const [disableBtn,setDisableBtn] = useState(false)
     const [productQuantity,setProductQty] = useState(1)
  
-
+console.log(item)
     useEffect(()=>{
       user.forEach((e)=>{
         if(e.id === item.id){
@@ -62,6 +62,7 @@ const ProductCard = ({ item, index, hadleAddCart}) => {
       <div className="card-body d-flex flex-column">
         <h5 className="card-title ">{item.title}</h5>
         <p className="card-text">{item.description.slice(0, 100) + "..."}</p>
+        <p className="card-text">Rating:{item.rating.rate}</p>
         <p className="price">Price : ${item.price * productQuantity}</p>
         {disableBtn == false ? (
           <button className="btn btn-primary mt-auto" onClick={handleCart}>

@@ -42,6 +42,7 @@ function Home() {
         <h2 className="mt-5">Products</h2>
         <div className="row card-container">
           {data.map((item, index) => (
+           
             <ProductCard
               item={item}
               index={index}
