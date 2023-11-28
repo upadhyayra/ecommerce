@@ -8,12 +8,17 @@ function Home() {
   const [data, setData] = useState([]);
   const { user, setUser } = useContext(Contextapi);
   useEffect(() => {
-    axios
-      .get("http://fakestoreapi.com/products")
-      .then((data) => setData(data.data))
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      axios
+        .get("http://fakestoreapi.com/products")
+        .then((data) => setData(data.data))
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      return { message: error.message };
+    }
+    
   }, []);
 
   function hadleAddCart(item) {
