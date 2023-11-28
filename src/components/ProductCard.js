@@ -5,8 +5,6 @@ const ProductCard = ({ item, index, hadleAddCart}) => {
     const {user,setUser} = useContext(ContextApi);
     const [disableBtn,setDisableBtn] = useState(false)
     const [productQuantity,setProductQty] = useState(1)
- 
-console.log(item)
     useEffect(()=>{
       user.forEach((e)=>{
         if(e.id === item.id){
